@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+.title-login{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #4D4242;
+}
+
+.login-dialog{
+	padding-top: 8em;
+	margin: auto;
+	width: 25em;
+}
+
+.login-inputs{
+	background-color: #c4c4c4;
+	border-radius: 5px;
+	padding: 2em;
+	border: 1px solid #959595;
+}
+
+.button-login{
+	margin-top: 1em;
+	width: 100%;
+}
+
+.copyright{
+	font-family: 'Roboto', sans-serif;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}

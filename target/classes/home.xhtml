@@ -1,0 +1,69 @@
+<ui:composition template="/WEB-INF/template/menu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="titulo">Home</ui:define>
+
+	<ui:define name="corpo">
+		<div class="hero-unit">
+			<h1>Ultimas transações</h1>
+			<p>
+				<h:form>
+					<p:dataTable var="produto" value="#{homeBean.listaDeProdutos}">
+						<p:column headerText="ID">
+							<p:outputLabel value="#{produto.id}" />
+						</p:column>
+						<p:column headerText="Nome">
+							<p:outputLabel value="#{produto.nome}" />
+						</p:column>
+						<p:column headerText="Quantidade">
+							<p:outputLabel value="#{produto.quantidadeEmEstoque}" />
+						</p:column>
+						<p:column headerText="Valor">
+							<p:outputLabel value="#{produto.valorUnitario}" />
+						</p:column>
+					</p:dataTable>
+				</h:form>
+			</p>
+			<p>
+				<a class="btn btn-primary btn-large">Learn more »</a>
+			</p>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+						<div class="span4">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+						<div class="span4">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

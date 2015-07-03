@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="titulo">Home</ui:insert></title>
+	<h:outputStylesheet library="css" name="reset.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="bootstrap-responsive.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
+	<header> <f:metadata>
+		<f:event listener="#{verifyUser.verificaUsuarioLogado}"
+			type="preRenderView" />
+	</f:metadata>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+
+
+		<h:form>
+			<p:menubar>
+				<p:submenu style="margin-left: 5em" label="Cadastro">
+					<p:menuitem value="Usuario" />
+					<p:separator />
+					<p:menuitem value="Categoria" />
+					<p:menuitem value="Produto" />
+				</p:submenu>
+				<p:submenu label="Compra">
+					<p:menuitem value="Novo" />
+					<p:menuitem value="Pesquisar" />
+				</p:submenu>
+				<p:submenu label="Venda">
+					<p:menuitem value="Novo" />
+					<p:menuitem value="Pesquisar" />
+				</p:submenu>
+
+				<f:facet name="options">
+					<a class="brand"
+						style="margin-right: 6em; color: black; font-size: 2em;" href="#">Sistema
+						de Exemplo</a>
+					<p:inputText style="margin-right:10px" placeholder="Search" />
+					<p:commandButton value="Logout" icon="ui-icon-extlink"
+						action="#{loginBean.logout}" ajax="false" />
+				</f:facet>
+
+			</p:menubar>
+		</h:form>
+
+	</div>
+
+	<div style="clear: both;"></div>
+	</header>
+
+	<div class="container-fluid" id="conteudo">
+		<ui:insert name="corpo" />
+	</div>
+
+	<p:separator style="margin-top: 20px" />
+
+	<foooter>
+	<h6>@ Augusto José - JSF CDI HTML CSS BOOTSTRAP PRIMEFACES
+		WELD-SERVLET REDIS</h6>
+	</foooter>
+</h:body>
+
+
+</html>
