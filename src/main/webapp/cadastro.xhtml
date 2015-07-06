@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Cadastrar</title>
+	<h:outputStylesheet library="css" name="cadastro.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
+
+	<f:metadata>
+		<f:viewParam name="dummy" />
+		<f:event listener="#{loginBean.preRender}" type="preRenderView" />
+	</f:metadata>
+
+	<div class="login-dialog">
+		<h1 class="title-login">Cadastro</h1>
+		<div class="login-inputs">
+			<h:form prependId="false">
+
+				<p:messages id="messages" autoUpdate="true" closable="true" />
+
+				<h:panelGrid columns="2">
+
+					<p:outputLabel value="Nome" />
+					<p:inputText size="32" required="true"
+						requiredMessage="Campo nome esta vazio.">
+					</p:inputText>
+
+					<p:outputLabel value="E-mail" />
+					<p:inputText size="32" required="true"
+						requiredMessage="Campo e-mail esta vazio.">
+					</p:inputText>
+
+					<p:outputLabel value="Senha" />
+
+					<p:password size="32" feedback="true" inline="true" required="true"
+						requiredMessage="Campo senha esta vazio." maxlength="25">
+					</p:password>
+				</h:panelGrid>
+				<p:commandButton value="Cadastrar" ajax="false"
+					styleClass="button-login"></p:commandButton>
+			</h:form>
+		</div>
+	</div>
+	<div class="copyright">@ Augusto José</div>
+</h:body>
+
+</html>
